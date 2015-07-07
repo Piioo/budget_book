@@ -29,4 +29,5 @@ group :development, :test do
   gem 'better_errors'
   gem 'pry'
   gem 'pry-remote'
+  gem 'shoulda-matchers'
 end
