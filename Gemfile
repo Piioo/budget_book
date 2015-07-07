@@ -26,5 +26,7 @@ group :development, :test do
   gem 'spring'
   gem 'thin'
   gem 'rspec-rails'
+  gem 'better_errors'
+  gem 'pry'
+  gem 'pry-remote'
 end
-
