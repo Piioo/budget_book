@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   get 'login',       to: 'sessions#new',      as: :login
 
   resource :session, only: [:create]
+
+  resources :budgets do
+    resources :activities
+  end
+
+  resources :kinds
 end

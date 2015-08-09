@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 
   validates :firstname, :lastname, :email, presence: true
 
+  has_many :budgets
+
   def self.authenticate(email, password)
     user = find_by_email(email.downcase)
 

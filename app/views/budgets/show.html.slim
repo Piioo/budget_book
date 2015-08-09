@@ -1,0 +1,21 @@
+h1= @budget.name
+
+= form_for [@budget, @activity] do |form|
+  .form-group
+    = form.date_select :date
+  .form-group
+    = form.text_field :amount
+  .form-group
+    = form.select :kind, Kind.all.collect { |kind| [kind.name, kind.id] }
+    = link_to new_kind_path do
+      button type="button" class="btn btn-default"
+        | Neue Art
+  .form-group
+    = form.text_area :description
+  .form-actions
+    = form.submit('Neue Transaktion', class: 'btn btn-primary')
+
+ul
+- @budget.activities.each do |activity|
+  li
+    = activity.amount

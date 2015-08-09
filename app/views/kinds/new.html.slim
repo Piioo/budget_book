@@ -1,0 +1,9 @@
+h1 Neue Art
+
+= form_for @kind do |form|
+  .form-group
+    = form.text_field :name
+  .form-group
+    = form.text_area :description
+  .form-actions
+    = form.submit('Submit', class: 'btn btn-primary')

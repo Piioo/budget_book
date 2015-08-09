@@ -1,1 +1,11 @@
 h1 Home
+
+= link_to new_budget_path do
+  button type="button" class="btn btn-default"
+    | Add Budget
+
+ul
+- @budgets.each do |budget|
+  li
+    = link_to budget do
+      = budget.name

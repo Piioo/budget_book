@@ -16,3 +16,10 @@ unless User.find_by(email: 'admin@foo.de')
   }
   User.create(user_data)
 end
+
+unless Kind.count > 0
+  Kind.create({ name: 'Lebensmittel' })
+  Kind.create({ name: 'Wohnung' })
+  Kind.create({ name: 'Gehalt' })
+  Kind.create({ name: 'Auto' })
+end
