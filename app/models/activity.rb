@@ -5,4 +5,6 @@ class Activity < ActiveRecord::Base
   belongs_to :budget
   belongs_to :kind
 
+  default_scope -> { order(:date) }
+
 end
